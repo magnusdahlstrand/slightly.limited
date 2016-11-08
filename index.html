@@ -11,20 +11,22 @@
 		}
 		html {
 			cursor: default;
-			background: #fdfdfd;
 		}
 		a {
-			color: #af7373;
+			color: inherit;
+			/* text-decoration: none; */
+			cursor: pointer;
 		}
 		.typ {
-			font: 300 16px/1.6 sans-serif;
-			color: #111;
+			font: 300 16px/1.6 'Open Sans', sans-serif;
+			color: #1d1d1d;
+			background: #fdfdfd;
 		}
 		.typ__title {
 			font-weight: 200;
 			font-size: 2em;
-			line-height: 1;
-			margin: 1em 0 0.5em;
+			line-height: 1.2;
+			margin: 0 0 0.5em;
 		}
 		.typ__lead {
 			margin: 0 0 0.5em;
@@ -36,21 +38,67 @@
 		}
 		.lay {
 			display: table;
-			width: 100vw;
-			height: 80vh;
-			text-align: center;
+			position: relative;
+			box-sizing: border-box;
+			min-height: 96vh;
+			width: 96vw;
+			margin: 2vh 2vw;
+			padding-left: 250px;
+			background: #1d1d1d;
+		}
+		.lay__side {
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			width: 250px;
+			top: 0;
+			bottom: 0;
+			padding: 1.5em 2em;
 		}
 		.lay__body {
 			display: table-cell;
-			vertical-align: middle;
+			box-sizing: border-box;
+			padding: 25vh 1vw 1vh 11vw;
+			width: 100%;
+			background: #fdfdfd;
+		}
+		.nav {
+			font-size: 1.5em;
+			font-weight: 200;
+			float: left;
+		}
+		.nav a {
+			text-decoration: none;
+		}
+		.nav__item {
+			display: block;
+			line-height: 1.2;
+			padding: 0;
+			margin: 1em 0;
+		}
+		.nav__item--logo {
+			margin: 0 0 4em;
+		}
+		.nav--open .nav__item--logo {
+			border-bottom: 0.5px solid transparent;
+			border-bottom-color: currentColor;
 		}
 	</style>
 </head>
-<body class="lay typ">
-	<div class="lay__body">
-		<h1 class="typ__title">slightly</h1>
-		<p class="typ__lead">interface research and development</p>
-		<p class="typ__shy">contact <a href="mailto:magnus">magnus</a> for work and info</p>
+<body class="lay">
+	<div class="lay__side typ">
+		<nav class="nav nav--open">
+			<a href="/" class="nav__item nav__item--logo">slightly.limited</a>
+			<a href="/projects/" class="nav__item">projects</a>
+			<a href="/research/" class="nav__item">research</a>
+			<a href="/tools/" class="nav__item">tools</a>
+		</nav>
+	</div>
+	<div class="lay__body typ">
+		<h1 class="typ__title">Magnus is slightly.limited</h1>
+		<p class="typ__lead">a multidisciplinary interface researcher and developer</p>
+		<p class="typ__shy">available for consultancy and contract</p>
+		<p class="typ__shy"><a href="mailto:magnus">email me</a> to talk ideas and possibilities</p>
 		<p class="typ__shy">London, UK</p>
 	</div>
 	<script>
