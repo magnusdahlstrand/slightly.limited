@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>slightly</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html {
+			cursor: default;
+			background: #fdfdfd;
+		}
+		a {
+			color: #af7373;
+		}
+		.typ {
+			font: 300 16px/1.6 sans-serif;
+			color: #111;
+		}
+		.typ__title {
+			font-weight: 200;
+			font-size: 2em;
+			line-height: 1;
+			margin: 1em 0 0.5em;
+		}
+		.typ__lead {
+			margin: 0 0 0.5em;
+		}
+		.typ__shy {
+			margin: 0 0;
+			font-size: 0.8em;
+			color: #333;
+		}
+		.lay {
+			display: table;
+			width: 100vw;
+			height: 80vh;
+			text-align: center;
+		}
+		.lay__body {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body class="lay typ">
+	<div class="lay__body">
+		<h1 class="typ__title">slightly</h1>
+		<p class="typ__lead">interface research and development</p>
+		<p class="typ__shy">contact <a href="mailto:magnus">magnus</a> for work and info</p>
+		<p class="typ__shy">London, UK</p>
+	</div>
+	<script>
+	(function(link) {
+		if(!link) return;
+		link.setAttribute('href', link.getAttribute('href') + '@' + location.host);
+	}(document.querySelector('a[href^="mailto:"]')));
+	</script>
+</body>
+</html>
